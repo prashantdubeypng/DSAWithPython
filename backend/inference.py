@@ -16,6 +16,19 @@ model = LSTMModel(
     hidden_dim=256,
     pad_token_id=tokenizer.pad_token_id
 )
+import os
+import urllib.request
+
+MODEL_PATH = "model_weights.pt"
+MODEL_URL = "https://github.com/prashantdubeypng/DSAWithPython/releases/download/v1.0/model_weights.pt"
+
+def ensure_model_weights():
+    if not os.path.exists(MODEL_PATH):
+        print("Downloading model weights...")
+        urllib.request.urlretrieve(MODEL_URL, MODEL_PATH)
+        print("Model weights downloaded.")
+
+ensure_model_weights()
 
 model.load_state_dict(
     torch.load("model_weights.pt", map_location=device)
