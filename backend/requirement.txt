@@ -1,5 +1,4 @@
 fastapi
 uvicorn
-torch
-transformers
-pydantic
+transformers==4.35.2
+numpy<2
