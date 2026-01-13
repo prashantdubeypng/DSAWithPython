@@ -10,7 +10,8 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:3000",          # local React dev
-        "https://dsawithpython.vercel.app" # (later) deployed frontend
+        "https://dsawithpython.vercel.app",
+         "https://word-suggestion-mu.vercel.app/" # (later) deployed frontend
     ],
     allow_credentials=True,
     allow_methods=["*"],
