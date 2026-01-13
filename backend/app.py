@@ -9,9 +9,9 @@ app = FastAPI(title="Next Word Prediction API")
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
-        "http://localhost:3000",          # local React dev
+        "http://localhost:3000",          
         "https://dsawithpython.vercel.app",
-        "https://word-suggestion-mu.vercel.app/" # (later) deployed frontend
+        "https://word-suggestion-mu.vercel.app" 
     ],
     allow_credentials=True,
     allow_methods=["*"],
